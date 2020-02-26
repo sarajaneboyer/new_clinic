@@ -1,2 +1,18 @@
-<h1>Doctors#new</h1>
-<p>Find me in app/views/doctors/new.html.erb</p>
+<h1>Add a New Doctor</h1>
+
+<% form_for @doctor do |f| %>%
+<div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, required: true, autofocus: true %>
+    </div>
+    <%= f.submit %>
+  <% end %>
+  
+  <%= form_with(model: @doctor, local: true ) do |f| %>
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, required: true, placeholder: "Last Name", autofocus: true %>
+  </div>
+  <%= f.submit %>
+<% end %>
+

@@ -3,6 +3,5 @@
 
 
   <% @doctors.each do |doctor| %>
-    <%= link_to doctor.last_name, doctor_path(:id) %>
+    <%= link_to doctor.last_name, doctor_path(doctor.id) %><br />
     <% end %>
-

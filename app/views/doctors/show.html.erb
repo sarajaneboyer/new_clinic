@@ -1,8 +1,6 @@
-<%= link_to 'Doctor List', root_path %><br />
-<%= link_to 'Patient List', patients_path %><br />
-<%= link_to 'Delete Doctor', doctor_path, method: :delete %>
 
 <% @doctor = Doctor.find(params[:id]) %>
 <h1><%= @doctor.last_name %></h1>
+<h4><%= link_to 'Delete Doctor', doctor_path, method: :delete %></h4><hr />
 <%= "Appointments" %>
 

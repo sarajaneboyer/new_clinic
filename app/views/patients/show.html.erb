@@ -1,6 +1,4 @@
-<%= link_to 'Doctor List', root_path %><br />
-<%= link_to 'Patient List', patients_path %><br />
-<%= link_to 'Delete Patient', patient_path, method: :delete %>
 
 <% @patient = Patient.find(params[:id]) %>
-<%= "#{@patient.last_name}, #{@patient.first_name}" %>
+<%= "#{@patient.last_name}, #{@patient.first_name}" %><br />
+<%= link_to 'Delete Patient', patient_path, method: :delete %>

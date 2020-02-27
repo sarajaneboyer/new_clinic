@@ -28,7 +28,7 @@ class PatientsController < ApplicationController
 
   def destroy
     @patient.destroy
-    redirect_to root_path
+    redirect_to patients_path
   end
 
   private
@@ -38,6 +38,6 @@ class PatientsController < ApplicationController
   end
 
   def patient_params
-    params.require(:patient).permit(:first_name,:last_name)
+    params.require(:patient).permit(:first_name, :last_name)
   end
 end
